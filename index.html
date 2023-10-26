@@ -3,8 +3,162 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>친구의 친구들</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap">
+    <link rel="stylesheet" href="./css/colors.css?theme=light">
+    <style>
+
+      /* reboot */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        :root {
+          scroll-behavior: smooth;
+        }
+      }
+
+      body {
+        margin: 0;
+        word-break: keep-all;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* custom */
+      :root {
+        --base-size: 22px;
+        --font-family-default: -apple-system, 'IBM Plex Sans KR', sans-serif;
+        --font-family-kick: 'Noto Serif KR', serif;
+      }
+
+      html {
+        line-height: 32px;
+        background-color: var(--color-indigo-100);
+        color: var(--color-gray-700);
+      }
+
+      main {
+        padding: calc(3.125vw + 14px) calc(3.125vw + 10px);
+      }
+
+      p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-family: var(--font-family-default);
+        font-size: var(--base-size);
+        font-weight: 700;
+        letter-spacing: -0.022em;
+      }
+      p:first-of-type {
+        margin-top: 0;
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .guestlist {
+        margin-top: var(--base-size);
+      }
+      .guestlist__line {
+        margin-top: 1em;
+        font-size: 21px;
+      }
+
+      .qna-box {
+        margin-top: calc(3 * var(--base-size));
+        margin-bottom: calc(3 * var(--base-size));
+      }
+      .qna-box:first-of-type {
+        margin-top: var(--base-size);
+      }
+      .qna-box__question {
+        margin-left: -1px;
+        font-family: var(--font-family-kick);
+        font-weight: 600;
+        font-size: calc(var(--base-size) - 2px);
+        letter-spacing: -0.025em;
+        color: var(--color-gray-600);
+      }
+      .qna-box__answer {
+        margin-top: 1em;
+      }
+
+      a {
+        color: var(--color-indigo-1100) !important;
+        text-decoration: none !important;
+      }
+      @media (hover: hover) {
+        a {
+          opacity: 0.75;
+          transition: opacity 250ms ease;
+          will-change: opacity;
+        }
+        a:hover {
+          opacity: 1;
+        }
+      }
+
+      .brand-dimmed {
+        opacity: 0.5;
+        color: var(--color-indigo-1100);
+      }
+      .brand-noticeable {
+        color: var(--color-indigo-1100);
+      }
+      .brand-noticeable sup {
+        margin-right: 0.5px;
+        font-size: 13.5px;
+        vertical-align: 6.5px;
+      }
+
+    </style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <main>
+      <section>
+        <p>수영, 안녕<wbr>하세요! 👋</p>
+        <p>정원의 친구 찬우라고 합니다. 11월 4일 준비하는 모임 자리에 당신을 초대드릴 수 있게 되어 기쁘네요.</p>
+        <p>저는 몇 년 전부터 제 생일 주간을 구실 삼아 이런저런 자리를 만들어 왔어요. 이번 모임은 &lt;친구의 친구들&gt;<wbr>이라는 이름으로, 말 그대로 친구와 친구의 친구들이 함께 모여 서로 알아가고 놀아 보자는 기획입니다.</p>
+        <p>마침 저의 친구 휴이가 운영하는 커뮤니티 <a href="https://7702.kr">껴울림</a>의 공간에서, 껴울림 팀과 함께 자리를 준비해 보게 되었어요. 그래서<wbr>인지… 그냥 만나 노는 것보다도 더 의미 있는 자리가 만들어질 것만 같네요.</p>
+        <p>그러면, 아래 안내를 참고해 주세요.</p>
+      </section>
+      <section style="padding-top: calc(2 * var(--base-size)); padding-bottom: calc(2 * var(--base-size));">
+        <div style="margin-top: 1em; font-family: var(--font-family-kick); font-size: 22px; font-weight: 600; color: var(--color-gray-600); text-align: center;">*</div>
+        <div style="margin-top: 1em; font-family: var(--font-family-kick); font-size: 20px; font-weight: 600; color: var(--color-gray-600);">모임에 오는 사람들</div>
+        <div class="guestlist">
+          <p class="guestlist__line"><span class="brand-dimmed">당신을 초대한</span> <span class="brand-noticeable"><sup>1</sup>정원,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구들</span> <span class="brand-noticeable"><sup>2</sup>가든&middot;<sup>3</sup>찬우,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구들</span> <span class="brand-noticeable"><sup>4</sup>민규&middot;<sup>5</sup>휴이,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구 민규의 친구들</span> <span class="brand-noticeable"><sup>6</sup>성민&middot;<sup>7</sup>피터,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구 휴이의 친구들</span> <span class="brand-noticeable"><sup>8</sup>미송송&middot;<sup>9</sup>진현</span></p>
+        </div>
+        <div style="margin-top: 1em; font-family: var(--font-family-kick); font-size: 22px; font-weight: 600; color: var(--color-gray-600); text-align: center;">*</div>
+      </section>
+      <section>
+        <div class="qna-box">
+          <p class="qna-box__question">언제 하나요?</p>
+          <p class="qna-box__answer"><a href="./event.ics">11월 4일, 토요일 오후 6시</a>에 모여 근방에 저녁을 먹으러 출발해요. 공간은 4시 반부터 개방될 예정이에요. 일찍 와서 함께하시면 더 좋겠습니다!</p>
+        </div>
+        <div class="qna-box">
+          <p class="qna-box__question">어디서 하나요?</p>
+          <p class="qna-box__answer"><a href="https://naver.me/57rX7ciJ">서울<wbr>특별시 용산구 신흥로<wbr>11길 49-12</a>로 와 주시면 됩니다. 찾아<wbr>오시는 데 조금 오래 걸릴 수 있으니 미리 감안을 부탁<wbr>드려요.</p>
+        </div>
+        <div class="qna-box">
+          <p class="qna-box__question">준비물이 있나요?</p>
+          <p class="qna-box__answer">각자 혹은 함께 마시고 싶은 음료를 가져와 주세요. 또한, 별도의 입장료는 없습니다.</p>
+        </div>
+      </section>
+      <section>
+        <p>그럼 편한 마음으로 곧 만나요!</p>
+        <p>찬우 드림</p>
+      </section>
+    </main>
   </body>
 </html>
