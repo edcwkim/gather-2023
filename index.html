@@ -68,6 +68,34 @@
         margin-bottom: 0;
       }
 
+      a {
+        color: var(--color-primary) !important;
+        text-decoration: none !important;
+      }
+      @media (hover: hover) {
+        a {
+          opacity: 0.75;
+          transition: opacity 250ms ease;
+          will-change: opacity;
+        }
+        a:hover {
+          opacity: 1;
+        }
+      }
+
+      .brand {
+        color: var(--color-primary);
+      }
+      .brand sup {
+        margin-right: 0.5px;
+        font-size: 13.5px;
+        vertical-align: 5px;
+      }
+      .brand-dimmed {
+        opacity: 0.5;
+        color: var(--color-primary);
+      }
+
       .guestlist-border {
         height: var(--base-size);
         font-family: system-ui, sans-serif;
@@ -123,34 +151,6 @@
         font-size: calc(var(--base-size) - 1px);
       }
 
-      a {
-        color: var(--color-primary) !important;
-        text-decoration: none !important;
-      }
-      @media (hover: hover) {
-        a {
-          opacity: 0.75;
-          transition: opacity 250ms ease;
-          will-change: opacity;
-        }
-        a:hover {
-          opacity: 1;
-        }
-      }
-
-      .brand-dimmed {
-        opacity: 0.5;
-        color: var(--color-primary);
-      }
-      .brand-noticeable {
-        color: var(--color-primary);
-      }
-      .brand-noticeable sup {
-        margin-right: 0.5px;
-        font-size: 13.5px;
-        vertical-align: 6.5px;
-      }
-
     </style>
   </head>
   <body>
@@ -169,11 +169,11 @@
         </div>
         <div class="guestlist-heading">오시는 분들</div>
         <div class="guestlist">
-          <p class="guestlist__line"><span class="brand-dimmed">수영을 초대한</span> <span class="brand-noticeable"><sup>1</sup>정원,</span></p>
-          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구들</span> <span class="brand-noticeable"><sup>2</sup>가든&middot;<sup>3</sup>찬우,</span></p>
-          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구들</span> <span class="brand-noticeable"><sup>4</sup>민규&middot;<sup>5</sup>휴이,</span></p>
-          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구 민규의 친구들</span> <span class="brand-noticeable"><sup>6</sup>성민&middot;<sup>7</sup>피터,</span></p>
-          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구 휴이의 친구들</span> <span class="brand-noticeable"><sup>8</sup>미송송&middot;<sup>9</sup>진현</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">수영을 초대한</span> <span class="brand"><sup>1</sup>정원,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구들</span> <span class="brand"><sup>2</sup>가든&middot;<sup>3</sup>찬우,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구들</span> <span class="brand"><sup>4</sup>민규&middot;<sup>5</sup>휴이,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구 민규의 친구들</span> <span class="brand"><sup>6</sup>성민&middot;<sup>7</sup>피터,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">정원의 친구 찬우의 친구 휴이의 친구들</span> <span class="brand"><sup>8</sup>미송송&middot;<sup>9</sup>진현</span></p>
         </div>
         <div class="guestlist-border">
           <span>*</span>
