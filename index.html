@@ -36,6 +36,8 @@
         --base-size: 22px;
         --font-family-default: -apple-system, 'IBM Plex Sans KR', sans-serif;
         --font-family-kick: 'Noto Serif KR', serif;
+        --color-primary: var(--color-indigo-1100);
+        --color-lighter: var(--color-gray-600);
       }
 
       html {
@@ -70,7 +72,7 @@
         height: var(--base-size);
         font-family: system-ui, sans-serif;
         font-size: 26px;
-        color: var(--color-gray-600);
+        color: var(--color-lighter);
       }
       .guestlist-border > span:nth-of-type(1) {
         float: left;
@@ -84,8 +86,8 @@
         font-family: var(--font-family-kick);
         font-size: calc(var(--base-size) - 4px);
         font-weight: 600;
-        letter-spacing: -0.025em;
-        color: var(--color-gray-600);
+        letter-spacing: -0.024em;
+        color: var(--color-lighter);
       }
       .guestlist {
         padding-top: calc(var(--base-size) + 4px);
@@ -113,8 +115,8 @@
         font-family: var(--font-family-kick);
         font-size: calc(var(--base-size) - 3px);
         font-weight: 600;
-        letter-spacing: -0.025em;
-        color: var(--color-gray-600);
+        letter-spacing: -0.024em;
+        color: var(--color-lighter);
       }
       .qna-box__answer {
         margin-top: 1em;
@@ -122,7 +124,7 @@
       }
 
       a {
-        color: var(--color-indigo-1100) !important;
+        color: var(--color-primary) !important;
         text-decoration: none !important;
       }
       @media (hover: hover) {
@@ -138,10 +140,10 @@
 
       .brand-dimmed {
         opacity: 0.5;
-        color: var(--color-indigo-1100);
+        color: var(--color-primary);
       }
       .brand-noticeable {
-        color: var(--color-indigo-1100);
+        color: var(--color-primary);
       }
       .brand-noticeable sup {
         margin-right: 0.5px;
