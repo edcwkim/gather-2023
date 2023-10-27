@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>친구의 친구들</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap">
+    <link rel="stylesheet" href="./css/colors.css?theme=light">
+    <style>
+
+      /* reboot */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        :root {
+          scroll-behavior: smooth;
+        }
+      }
+
+      body {
+        margin: 0;
+        word-break: keep-all;
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* custom */
+      :root {
+        --base-size: 22px;
+        --font-family-default: -apple-system, 'IBM Plex Sans KR', sans-serif;
+        --font-family-kick: 'Noto Serif KR', serif;
+        --color-primary: var(--color-indigo-1100);
+        --color-lighter: var(--color-gray-600);
+      }
+
+      html {
+        line-height: calc(32 / 22);
+        background-color: var(--color-indigo-100);
+        color: var(--color-gray-700);
+      }
+
+      main {
+        padding-top: calc(2.5vw + 20px);
+        padding-bottom: calc(2.5vw + 19px);
+        padding-right: calc(3vw + 11px);
+        padding-left: calc(3vw + 10px);
+      }
+
+      p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-family: var(--font-family-default);
+        font-size: var(--base-size);
+        font-weight: 700;
+        letter-spacing: -0.024em;
+      }
+      p:first-of-type {
+        margin-top: 0;
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: var(--color-primary) !important;
+        text-decoration: none !important;
+      }
+      @media (hover: hover) {
+        a {
+          opacity: 0.75;
+          transition: opacity 250ms ease;
+          will-change: opacity;
+        }
+        a:hover {
+          opacity: 1;
+        }
+      }
+
+      .brand {
+        color: var(--color-primary);
+      }
+      .brand sup {
+        margin-right: 0.5px;
+        font-size: 13.5px;
+        vertical-align: 5px;
+      }
+      .brand-dimmed {
+        opacity: 0.5;
+        color: var(--color-primary);
+      }
+
+      .guestlist-border {
+        height: var(--base-size);
+        font-family: system-ui, sans-serif;
+        font-size: 24px;
+        color: var(--color-lighter);
+      }
+      .guestlist-border > span:nth-of-type(1) {
+        float: left;
+      }
+      .guestlist-border > span:nth-of-type(2) {
+        float: right;
+      }
+      .guestlist-heading {
+        margin-top: calc(var(--base-size) - 5px);
+        text-align: center;
+        font-family: var(--font-family-kick);
+        font-size: calc(var(--base-size) - 4px);
+        font-weight: 600;
+        letter-spacing: -0.024em;
+        color: var(--color-lighter);
+      }
+      .guestlist {
+        padding-top: calc(var(--base-size) + 5px);
+        padding-bottom: calc(var(--base-size) + 4px);
+        padding-right: calc(3vw + 9px);
+        padding-left: calc(3vw + 8px);
+      }
+      .guestlist__line {
+        margin-top: 1em;
+        font-size: calc(var(--base-size) - 3px);
+      }
+
+      .qna-box {
+        margin-top: calc(2 * var(--base-size));
+        margin-bottom: calc(2 * var(--base-size));
+      }
+      .qna-box:first-of-type {
+        margin-top: 0;
+      }
+      .qna-box:last-of-type {
+        margin-bottom: 0;
+      }
+      .qna-box__question {
+        margin-left: -1px;
+        font-family: var(--font-family-kick);
+        font-size: calc(var(--base-size) - 3px);
+        font-weight: 600;
+        letter-spacing: -0.024em;
+        color: var(--color-lighter);
+      }
+      .qna-box__answer {
+        margin-top: 1em;
+        font-size: calc(var(--base-size) - 1px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <p>피터, 안녕<wbr>하세요! 👋</p>
+        <p>민규의 친구 찬우라고 합니다. 11월 4일 준비하는 모임 자리에 당신을 초대드릴 수 있게 되어 기쁘네요.</p>
+        <p>저는 몇 년 전부터 제 생일 주간을 구실로 이런저런 자리를 열어 왔어요. 이번 모임은 &lt;친구의 친구들&gt;<wbr>이라는 이름으로, 말 그대로 친구와 친구의 친구들이 한데 모여 서로 알아가고 놀아 보자는 기획<wbr>입니다.</p>
+        <p>마침 저의 친구 휴이가 운영하는 커뮤니티 <a href="https://7702.kr">껴울림</a>의 공간에서 껴울림 팀과 함께 진행을 준비해 보게 되었고요. 그래서<wbr>인지… 그냥 만나서 노는 것보다도 더 의미 있는 자리가 될 것 같아요!</p>
+        <p>그러면, 아래 안내를 참고해 주세요.</p>
+      </section>
+      <section style="margin-top: calc(3.125 * var(--base-size)); margin-bottom: calc(3.125 * var(--base-size));">
+        <div class="guestlist-border">
+          <span>*</span>
+          <span>*</span>
+        </div>
+        <div class="guestlist-heading">오시는 분들</div>
+        <div class="guestlist">
+          <p class="guestlist__line"><span class="brand-dimmed">이 초대장을 받는</span> <span class="brand"><sup>1</sup>피터,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">피터를 초대한</span> <span class="brand"><sup>2</sup>민규,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">민규의 친구들</span> <span class="brand"><sup>3</sup>성민&middot;<sup>4</sup>찬우,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">민규의 친구 찬우의 친구들</span> <span class="brand"><sup>5</sup>휴이&middot;<sup>6</sup>정원,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">민규의 친구 찬우의 친구 휴이의 친구들</span> <span class="brand"><sup>7</sup>진현&middot;<sup>8</sup>미송송,</span></p>
+          <p class="guestlist__line"><span class="brand-dimmed">민규의 친구 찬우의 친구 정원의 친구들</span> <span class="brand"><sup>9</sup>수영&middot;<sup>10</sup>가든</span></p>
+        </div>
+        <div class="guestlist-border">
+          <span>*</span>
+          <span>*</span>
+        </div>
+      </section>
+      <section>
+        <div class="qna-box">
+          <p class="qna-box__question">언제 하나요?</p>
+          <p class="qna-box__answer"><a href="./event.ics">11월 4일, 토요일 오후 6시</a>에 모여 근방에 저녁을 먹으러 출발해요. 공간은 4시 반에 열릴 예정<wbr>입니다. 일찍 와서 함께<wbr>하시면 더 좋겠어요!</p>
+        </div>
+        <div class="qna-box">
+          <p class="qna-box__question">어디서 하나요?</p>
+          <p class="qna-box__answer"><a href="https://naver.me/57rX7ciJ">서울<wbr>특별시 용산구 신흥로<wbr>11길 49-12</a>로 와 주시면 됩니다. 찾아오는 데 시간이 조금 걸릴 수 있으니 미리 감안을 부탁<wbr>드려요.</p>
+        </div>
+        <div class="qna-box">
+          <p class="qna-box__question">준비물이 있나요?</p>
+          <p class="qna-box__answer">각자 혹은 함께 마시고 싶은 음료를 가져와 주세요. 또한, 별도의 입장료는 없습니다.</p>
+        </div>
+      </section>
+      <section style="margin-top: calc(3.125 * var(--base-size));"">
+        <p>우리 곧 편한 마음으로 만나요! 🙌</p>
+      </section>
+    </main>
+  </body>
+</html>
