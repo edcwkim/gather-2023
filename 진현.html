@@ -37,6 +37,7 @@
         --font-family-default: -apple-system, 'IBM Plex Sans KR', sans-serif;
         --font-family-kick: 'Noto Serif KR', serif;
         --color-primary: var(--color-indigo-1100);
+        --color-primary-dimmed: rgba(50, 54, 168, 0.5);
         --color-lighter: var(--color-gray-600);
       }
 
@@ -70,17 +71,14 @@
 
       a {
         color: var(--color-primary) !important;
-        text-decoration: none !important;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 3px;
+        text-decoration-color: var(--color-primary-dimmed);
+        transition: text-decoration-color 250ms ease;
+        will-change: text-decoration-color;
       }
-      @media (hover: hover) {
-        a {
-          opacity: 0.75;
-          transition: opacity 250ms ease;
-          will-change: opacity;
-        }
-        a:hover {
-          opacity: 1;
-        }
+      a:hover {
+        text-decoration-color: var(--color-primary);
       }
 
       .brand {
@@ -92,8 +90,7 @@
         vertical-align: 5px;
       }
       .brand-dimmed {
-        opacity: 0.5;
-        color: var(--color-primary);
+        color: var(--color-primary-dimmed);
       }
 
       .guestlist-border {
